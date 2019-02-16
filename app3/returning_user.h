@@ -11,8 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface returning_user : NSObject
-@property (strong, nonatomic) IBOutlet UITextField *email1;
-@property (strong, nonatomic) IBOutlet UITextField *password1;
+//@property (strong, nonatomic) IBOutlet UITextField *email1;
+//@property (strong, nonatomic) IBOutlet UITextField *password1;
 @property (strong, nonatomic) IBOutlet UIButton *submit;
 @end
 

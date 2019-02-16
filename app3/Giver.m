@@ -15,7 +15,7 @@
 
 - (IBAction)user_name:(id)sender {
   FIRFirestore * apple;
-    [[[apple collectionWithPath:@"users"] documentWithPath:@"names"] addDocumentWithData:@{ @"firstName": @user_name}];
+//    [[[apple collectionWithPath:@"users"] documentWithPath:@"names"] addDocumentWithData:@{ @"firstName": @user_name}];
 }
 
 @end
