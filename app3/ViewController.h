@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIButton *userButton;
+
 
 
 @end
