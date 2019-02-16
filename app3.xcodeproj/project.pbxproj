@@ -28,6 +28,10 @@
 		F3240E0F2218215200887B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2492CD221806DA00D9E4F0 /* AppDelegate.m */; };
 		F3240E112218256A00887B04 /* Giver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3240E102218256A00887B04 /* Giver.storyboard */; };
 		F3240E142218262000887B04 /* Giver.m in Sources */ = {isa = PBXBuildFile; fileRef = F3240E132218262000887B04 /* Giver.m */; };
+		F3240E26221867F800887B04 /* new_user.m in Sources */ = {isa = PBXBuildFile; fileRef = F3240E25221867F800887B04 /* new_user.m */; };
+		F3240E292218680C00887B04 /* returning_user.m in Sources */ = {isa = PBXBuildFile; fileRef = F3240E282218680C00887B04 /* returning_user.m */; };
+		F3240E2B2218683300887B04 /* new_user.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3240E2A2218683300887B04 /* new_user.storyboard */; };
+		F3240E2D2218684600887B04 /* returning_user.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3240E2C2218684600887B04 /* returning_user.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,12 @@
 		F3240E102218256A00887B04 /* Giver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Giver.storyboard; sourceTree = "<group>"; };
 		F3240E122218262000887B04 /* Giver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Giver.h; sourceTree = "<group>"; };
 		F3240E132218262000887B04 /* Giver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Giver.m; sourceTree = "<group>"; };
+		F3240E24221867F800887B04 /* new_user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = new_user.h; sourceTree = "<group>"; };
+		F3240E25221867F800887B04 /* new_user.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = new_user.m; sourceTree = "<group>"; };
+		F3240E272218680C00887B04 /* returning_user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = returning_user.h; sourceTree = "<group>"; };
+		F3240E282218680C00887B04 /* returning_user.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = returning_user.m; sourceTree = "<group>"; };
+		F3240E2A2218683300887B04 /* new_user.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = new_user.storyboard; sourceTree = "<group>"; };
+		F3240E2C2218684600887B04 /* returning_user.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = returning_user.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +178,12 @@
 				4C2493102218360200D9E4F0 /* PopOverViewController.h */,
 				4C2493112218360200D9E4F0 /* PopOverViewController.m */,
 				4C7F4EA82218789C0062380B /* OpeningScreen.storyboard */,
+				F3240E24221867F800887B04 /* new_user.h */,
+				F3240E25221867F800887B04 /* new_user.m */,
+				F3240E2A2218683300887B04 /* new_user.storyboard */,
+				F3240E272218680C00887B04 /* returning_user.h */,
+				F3240E2C2218684600887B04 /* returning_user.storyboard */,
+				F3240E282218680C00887B04 /* returning_user.m */,
 			);
 			path = app3;
 			sourceTree = "<group>";
@@ -311,6 +327,8 @@
 				4C2492D6221806DB00D9E4F0 /* Assets.xcassets in Resources */,
 				4C2493042218119E00D9E4F0 /* GoogleService-Info.plist in Resources */,
 				F3240E112218256A00887B04 /* Giver.storyboard in Resources */,
+				F3240E2D2218684600887B04 /* returning_user.storyboard in Resources */,
+				F3240E2B2218683300887B04 /* new_user.storyboard in Resources */,
 				4C2492D4221806DA00D9E4F0 /* Main.storyboard in Resources */,
 				4C7F4EA92218789C0062380B /* OpeningScreen.storyboard in Resources */,
 			);
@@ -432,10 +450,12 @@
 			files = (
 				4C2492D1221806DA00D9E4F0 /* ViewController.m in Sources */,
 				4C2492DC221806DB00D9E4F0 /* main.m in Sources */,
+				F3240E26221867F800887B04 /* new_user.m in Sources */,
 				4C2493122218360300D9E4F0 /* PopOverViewController.m in Sources */,
 				4C2492CE221806DA00D9E4F0 /* AppDelegate.m in Sources */,
 				F3240E142218262000887B04 /* Giver.m in Sources */,
 				4C24930F22181EB900D9E4F0 /* MapAnnotation.m in Sources */,
+				F3240E292218680C00887B04 /* returning_user.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
