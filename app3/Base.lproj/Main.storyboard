@@ -13,7 +13,7 @@
         <!--Table View-->
         <scene sceneID="KyE-J1-kIj">
             <objects>
-                <viewController storyboardIdentifier="tableView" id="hfq-Wx-9mY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tableView" id="hfq-Wx-9mY" customClass="DonationTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UGu-y2-Hpr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,13 +23,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="685-dq-COm">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DonationCell" rowHeight="68" id="685-dq-COm" customClass="DonationCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="685-dq-COm" id="uFN-9e-bur">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-zi-86n">
+                                                    <rect key="frame" x="26" y="23" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="HhF-zi-86n" id="KI0-6I-A6q"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -38,22 +50,34 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Distance"/>
+                                <connections>
+                                    <action selector="didTapDistance:" destination="hfq-Wx-9mY" eventType="touchUpInside" id="wLb-dF-XXk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKN-zV-92U">
                                 <rect key="frame" x="191" y="70" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Portion"/>
+                                <connections>
+                                    <action selector="didTapQuantity:" destination="hfq-Wx-9mY" eventType="touchUpInside" id="LaD-Ya-pll"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-uw-QBk">
                                 <rect key="frame" x="285" y="90" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Time"/>
+                                <connections>
+                                    <action selector="didTapTime:" destination="hfq-Wx-9mY" eventType="touchUpInside" id="K5T-FA-P8y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Bbj-z8-kmj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Table View" id="QO1-hg-iCo"/>
+                    <connections>
+                        <outlet property="tableView" destination="Eab-hP-xSc" id="dTj-Y0-F2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmb-37-s2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
