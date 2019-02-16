@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
-@interface ViewController : UIViewController
+#import <MapKit/MapKit.h>
+
+@interface ViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIButton *userButton;
 
 
 @end

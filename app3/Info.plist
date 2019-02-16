@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location services are needed to detect activity near paths.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location services are needed to detect activity near paths.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location services are needed to display the current location and points of interest.</string>
 </dict>
 </plist>
