@@ -6,7 +6,11 @@ target 'app3' do
   # use_frameworks!
 
   # Pods for app3
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
   target 'app3Tests' do
     inherit! :search_paths
     # Pods for testing

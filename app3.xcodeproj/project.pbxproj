@@ -21,6 +21,10 @@
 		4C2493062218119E00D9E4F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C2493032218119E00D9E4F0 /* GoogleService-Info.plist */; };
 		733F58E35B995DAB39A92095 /* libPods-app3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DE3AE1A07CCDE81AF6B38B /* libPods-app3.a */; };
 		82FEE1FBA8CE4211D8E7CF36 /* libPods-app3Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F69D66BDB1360388E0BB24 /* libPods-app3Tests.a */; };
+		F3240E0E2218215100887B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2492CD221806DA00D9E4F0 /* AppDelegate.m */; };
+		F3240E0F2218215200887B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2492CD221806DA00D9E4F0 /* AppDelegate.m */; };
+		F3240E112218256A00887B04 /* Giver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3240E102218256A00887B04 /* Giver.storyboard */; };
+		F3240E142218262000887B04 /* Giver.m in Sources */ = {isa = PBXBuildFile; fileRef = F3240E132218262000887B04 /* Giver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,9 @@
 		87E84A53FD60C58300AB5859 /* Pods-app3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app3UITests.release.xcconfig"; path = "Target Support Files/Pods-app3UITests/Pods-app3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		BCC39F301EDB7FB7D961D4AB /* Pods-app3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app3.debug.xcconfig"; path = "Target Support Files/Pods-app3/Pods-app3.debug.xcconfig"; sourceTree = "<group>"; };
 		D3F69D66BDB1360388E0BB24 /* libPods-app3Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-app3Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3240E102218256A00887B04 /* Giver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Giver.storyboard; sourceTree = "<group>"; };
+		F3240E122218262000887B04 /* Giver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Giver.h; sourceTree = "<group>"; };
+		F3240E132218262000887B04 /* Giver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Giver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +152,9 @@
 				4C2492D7221806DB00D9E4F0 /* LaunchScreen.storyboard */,
 				4C2492DA221806DB00D9E4F0 /* Info.plist */,
 				4C2492DB221806DB00D9E4F0 /* main.m */,
+				F3240E102218256A00887B04 /* Giver.storyboard */,
+				F3240E122218262000887B04 /* Giver.h */,
+				F3240E132218262000887B04 /* Giver.m */,
 			);
 			path = app3;
 			sourceTree = "<group>";
@@ -188,6 +198,7 @@
 				4C2492C5221806DA00D9E4F0 /* Sources */,
 				4C2492C6221806DA00D9E4F0 /* Frameworks */,
 				4C2492C7221806DA00D9E4F0 /* Resources */,
+				5BABB6CCD0B7FE5AA02C780F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +297,7 @@
 				4C2492D9221806DB00D9E4F0 /* LaunchScreen.storyboard in Resources */,
 				4C2492D6221806DB00D9E4F0 /* Assets.xcassets in Resources */,
 				4C2493042218119E00D9E4F0 /* GoogleService-Info.plist in Resources */,
+				F3240E112218256A00887B04 /* Giver.storyboard in Resources */,
 				4C2492D4221806DA00D9E4F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +321,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5BABB6CCD0B7FE5AA02C780F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-app3/Pods-app3-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-app3/Pods-app3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		86C2A3417A209E58CD4406BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,6 +419,7 @@
 				4C2492D1221806DA00D9E4F0 /* ViewController.m in Sources */,
 				4C2492DC221806DB00D9E4F0 /* main.m in Sources */,
 				4C2492CE221806DA00D9E4F0 /* AppDelegate.m in Sources */,
+				F3240E142218262000887B04 /* Giver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3240E0E2218215100887B04 /* AppDelegate.m in Sources */,
 				4C2492E6221806DC00D9E4F0 /* app3Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3240E0F2218215200887B04 /* AppDelegate.m in Sources */,
 				4C2492F1221806DC00D9E4F0 /* app3UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

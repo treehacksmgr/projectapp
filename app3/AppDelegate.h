@@ -5,7 +5,7 @@
 //  Created by Ginger Dudley on 2/16/19.
 //  Copyright © 2019 Ginger Dudley. All rights reserved.
 //
-
+#import <Firebase/Firebase.h>
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

@@ -7,16 +7,17 @@
 //
 
 #import "AppDelegate.h"
-
+#import <Firebase/Firebase.h>
 @interface AppDelegate ()
 
 @end
 
 
 @import UIKit;
-@import Firebase;
 
+@import Firebase;
 @implementation AppDelegate
+
 
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
