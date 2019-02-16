@@ -15,8 +15,7 @@
 
 - (IBAction)user_name:(id)sender {
   FIRFirestore * apple;
-  FIRDatabaseReference *reference;
-  FIRCollectionReference *citiesRef = [apple collectionWithPath:@"users"];
+    [[[apple collectionWithPath:@"users"] documentWithPath:@"names"] addDocumentWithData:@{ @"firstName": @user_name}];
 }
 
 @end
