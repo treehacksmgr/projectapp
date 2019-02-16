@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UITextField * email2;
 @property (strong, nonatomic) IBOutlet UITextField * password2;
 @property (strong, nonatomic) IBOutlet UIButton * submit1;
+//@property (strong, nonatomic) IBOutlet UITextField *email1;
+//@property (strong, nonatomic) IBOutlet UITextField *password1;
+@property (strong, nonatomic) IBOutlet UIButton *submit;
 @end
 
 NS_ASSUME_NONNULL_END
