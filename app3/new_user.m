@@ -23,6 +23,8 @@ NSString *password;
                     completion:^(FIRAuthDataResult * _Nullable authResult,
                                  NSError * _Nullable error) {
     }];
+    FIRFirestore * apple;
+    //[[[apple collectionWithPath:@"users"] documentWithPath:@"names"] addDocumentWithData:@{ @"firstName": @user_name}];
 }
 
 @end

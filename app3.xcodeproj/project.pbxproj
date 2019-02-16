@@ -21,13 +21,10 @@
 		4C2493062218119E00D9E4F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C2493032218119E00D9E4F0 /* GoogleService-Info.plist */; };
 		4C24930F22181EB900D9E4F0 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C24930E22181EB900D9E4F0 /* MapAnnotation.m */; };
 		4C2493122218360300D9E4F0 /* PopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2493112218360200D9E4F0 /* PopOverViewController.m */; };
-		4C7F4EA92218789C0062380B /* OpeningScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F4EA82218789C0062380B /* OpeningScreen.storyboard */; };
 		733F58E35B995DAB39A92095 /* libPods-app3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DE3AE1A07CCDE81AF6B38B /* libPods-app3.a */; };
 		82FEE1FBA8CE4211D8E7CF36 /* libPods-app3Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F69D66BDB1360388E0BB24 /* libPods-app3Tests.a */; };
 		F3240E0E2218215100887B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2492CD221806DA00D9E4F0 /* AppDelegate.m */; };
 		F3240E0F2218215200887B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2492CD221806DA00D9E4F0 /* AppDelegate.m */; };
-		F3240E112218256A00887B04 /* Giver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3240E102218256A00887B04 /* Giver.storyboard */; };
-		F3240E142218262000887B04 /* Giver.m in Sources */ = {isa = PBXBuildFile; fileRef = F3240E132218262000887B04 /* Giver.m */; };
 		F3240E26221867F800887B04 /* new_user.m in Sources */ = {isa = PBXBuildFile; fileRef = F3240E25221867F800887B04 /* new_user.m */; };
 		F3240E292218680C00887B04 /* returning_user.m in Sources */ = {isa = PBXBuildFile; fileRef = F3240E282218680C00887B04 /* returning_user.m */; };
 		F3240E2B2218683300887B04 /* new_user.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3240E2A2218683300887B04 /* new_user.storyboard */; };
@@ -77,15 +74,11 @@
 		4C24930E22181EB900D9E4F0 /* MapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		4C2493102218360200D9E4F0 /* PopOverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopOverViewController.h; sourceTree = "<group>"; };
 		4C2493112218360200D9E4F0 /* PopOverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopOverViewController.m; sourceTree = "<group>"; };
-		4C7F4EA82218789C0062380B /* OpeningScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpeningScreen.storyboard; sourceTree = "<group>"; };
 		57F23D03F642939EC7619846 /* Pods-app3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app3Tests.debug.xcconfig"; path = "Target Support Files/Pods-app3Tests/Pods-app3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B04329BBBDF376FF22E5E19 /* libPods-app3UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-app3UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E84A53FD60C58300AB5859 /* Pods-app3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app3UITests.release.xcconfig"; path = "Target Support Files/Pods-app3UITests/Pods-app3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		BCC39F301EDB7FB7D961D4AB /* Pods-app3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app3.debug.xcconfig"; path = "Target Support Files/Pods-app3/Pods-app3.debug.xcconfig"; sourceTree = "<group>"; };
 		D3F69D66BDB1360388E0BB24 /* libPods-app3Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-app3Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3240E102218256A00887B04 /* Giver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Giver.storyboard; sourceTree = "<group>"; };
-		F3240E122218262000887B04 /* Giver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Giver.h; sourceTree = "<group>"; };
-		F3240E132218262000887B04 /* Giver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Giver.m; sourceTree = "<group>"; };
 		F3240E24221867F800887B04 /* new_user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = new_user.h; sourceTree = "<group>"; };
 		F3240E25221867F800887B04 /* new_user.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = new_user.m; sourceTree = "<group>"; };
 		F3240E272218680C00887B04 /* returning_user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = returning_user.h; sourceTree = "<group>"; };
@@ -170,14 +163,10 @@
 				4C2492D7221806DB00D9E4F0 /* LaunchScreen.storyboard */,
 				4C2492DA221806DB00D9E4F0 /* Info.plist */,
 				4C2492DB221806DB00D9E4F0 /* main.m */,
-				F3240E102218256A00887B04 /* Giver.storyboard */,
-				F3240E122218262000887B04 /* Giver.h */,
-				F3240E132218262000887B04 /* Giver.m */,
 				4C24930D22181EB900D9E4F0 /* MapAnnotation.h */,
 				4C24930E22181EB900D9E4F0 /* MapAnnotation.m */,
 				4C2493102218360200D9E4F0 /* PopOverViewController.h */,
 				4C2493112218360200D9E4F0 /* PopOverViewController.m */,
-				4C7F4EA82218789C0062380B /* OpeningScreen.storyboard */,
 				F3240E24221867F800887B04 /* new_user.h */,
 				F3240E25221867F800887B04 /* new_user.m */,
 				F3240E2A2218683300887B04 /* new_user.storyboard */,
@@ -326,11 +315,9 @@
 				4C2492D9221806DB00D9E4F0 /* LaunchScreen.storyboard in Resources */,
 				4C2492D6221806DB00D9E4F0 /* Assets.xcassets in Resources */,
 				4C2493042218119E00D9E4F0 /* GoogleService-Info.plist in Resources */,
-				F3240E112218256A00887B04 /* Giver.storyboard in Resources */,
 				F3240E2D2218684600887B04 /* returning_user.storyboard in Resources */,
 				F3240E2B2218683300887B04 /* new_user.storyboard in Resources */,
 				4C2492D4221806DA00D9E4F0 /* Main.storyboard in Resources */,
-				4C7F4EA92218789C0062380B /* OpeningScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +440,6 @@
 				F3240E26221867F800887B04 /* new_user.m in Sources */,
 				4C2493122218360300D9E4F0 /* PopOverViewController.m in Sources */,
 				4C2492CE221806DA00D9E4F0 /* AppDelegate.m in Sources */,
-				F3240E142218262000887B04 /* Giver.m in Sources */,
 				4C24930F22181EB900D9E4F0 /* MapAnnotation.m in Sources */,
 				F3240E292218680C00887B04 /* returning_user.m in Sources */,
 			);

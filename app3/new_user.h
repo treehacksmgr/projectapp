@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
-
 @interface new_user : NSObject
 @property (strong, nonatomic) IBOutlet UITextField *email1;
 @property (strong, nonatomic) IBOutlet UITextField *password1;
