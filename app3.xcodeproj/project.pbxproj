@@ -647,6 +647,7 @@
 			baseConfigurationReference = BCC39F301EDB7FB7D961D4AB /* Pods-app3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQJ55SDWUK;
 				ENABLE_BITCODE = NO;
@@ -666,6 +667,7 @@
 			baseConfigurationReference = 179CCB85B3CB7A111224DF23 /* Pods-app3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQJ55SDWUK;
 				ENABLE_BITCODE = NO;
