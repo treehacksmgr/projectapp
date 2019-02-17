@@ -91,7 +91,7 @@
     [self.tableView reloadData];
     self.distanceView.backgroundColor = [UIColor colorWithRed:0 green:10 blue:60 alpha:1];
     self.portionView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
-    self.portionView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
+    self.timeView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
     
 }
 
@@ -100,7 +100,7 @@
     [self.tableView reloadData];
     self.distanceView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
     self.portionView.backgroundColor = [UIColor colorWithRed:0 green:10 blue:60 alpha:1];
-    self.portionView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
+    self.timeView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
 }
 
 - (IBAction)didTapTime:(id)sender {
@@ -108,7 +108,7 @@
     [self.tableView reloadData];
     self.distanceView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
     self.portionView.backgroundColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
-    self.portionView.backgroundColor = [UIColor colorWithRed:0 green:10 blue:60 alpha:1];
+    self.timeView.backgroundColor = [UIColor colorWithRed:0 green:10 blue:60 alpha:.8];
 }
 
 

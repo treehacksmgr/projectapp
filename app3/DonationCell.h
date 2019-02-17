@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DonationCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *donationImage;
+@property (weak, nonatomic) IBOutlet UILabel *donationTitle;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLable;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *servingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *foodLabel;
 
 @end
 
