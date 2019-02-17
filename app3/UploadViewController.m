@@ -70,6 +70,7 @@
     f.numberStyle = NSNumberFormatterDecimalStyle;
     newDonation.quantity = [f numberFromString:self.quantityTextField.text];
     NSLog(@"yeahhh babyy");
+    
 }
 
 

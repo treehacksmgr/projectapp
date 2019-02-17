@@ -44,7 +44,12 @@
     //CLLocationCoordinate2D location;
 
     CLLocationCoordinate2D location2;
-
+    
+    //going to need to go through and loop through the donations items in order to populate the map with all of the locations
+//    for (int i = 0; i; i++) {
+//
+//    }
+    
     location2.latitude = locationManager.location.coordinate.latitude;
     location2.longitude = locationManager.location.coordinate.longitude;
     MapAnnotation *newAnnotation2 = [[MapAnnotation alloc]
