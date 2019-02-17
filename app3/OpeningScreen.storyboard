@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="338" y="25"/>
         </scene>
-        <!--new_user-->
+        <!--NewUser-->
         <scene sceneID="DG8-d9-iJO">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="new_user" storyboardName="new_user" id="dwc-sb-iXa" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="new_user" storyboardName="NewUser" id="dwc-sb-iXa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tB2-5u-vYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="337" y="142"/>
