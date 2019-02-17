@@ -117,6 +117,14 @@
                                 <color key="textColor" red="0.045123350650399498" green="0.14313862402009256" blue="0.52164968526165811" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuj-yw-WFl">
+                                <rect key="frame" x="30" y="77" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="didTapLogout:" destination="X2H-hd-hjn" eventType="touchUpInside" id="Vsy-WT-Gef"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66388377633500917" green="0.80498684256647079" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>

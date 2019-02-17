@@ -7,6 +7,7 @@
 //
 
 #import "DonationTableViewController.h"
+#import "DonationCell.h"
 
 
 @interface DonationTableViewController ()
@@ -25,11 +26,11 @@
     //making fake data to test the table
     self.donationsMutable = [[NSMutableArray alloc] init];
     self.donations = [[NSArray alloc] init];
-    //[self populateFakeData];
     [self queryForDonations];
     self.donations = [NSArray arrayWithArray:self.donationsMutable];
     self.tableView.dataSource = self;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"DonationCell"];
+    
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"DonationCell"];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -41,34 +42,6 @@
     NSLog(@"help");
 }
 
--(void) populateFakeData{
-    self.donate1 = [[Donation alloc] init];
-    self.donate1.latitude = [NSNumber numberWithDouble:37.4198];
-    self.donate1.longitude = [NSNumber numberWithDouble:-122.0788];
-    //donate1.startTime =
-    self.donate1.quantity = [NSNumber numberWithDouble:20];
-    //self.donate1.orgName = @"Google HQ";
-    
-    self.donate2 = [[Donation alloc] init];
-    self.donate2.latitude = [NSNumber numberWithDouble:35.7877];
-    self.donate2.longitude = [NSNumber numberWithDouble:-78.6442];
-    //donate1.startTime =
-    self.donate2.quantity = [NSNumber numberWithDouble:12];
-    //self.donate2.orgName = @"Raleigh";
-    
-    self.donate3 = [[Donation alloc] init];
-    self.donate3.latitude = [NSNumber numberWithDouble:32.7157];
-    self.donate3.longitude = [NSNumber numberWithDouble:-117.1610];
-    //donate1.startTime =
-    self.donate3.quantity = [NSNumber numberWithDouble:1];
-    //self.donate3.orgName = @"San Diego";
-    
-    [self.donationsMutable addObject:self.donate1];
-    [self.donationsMutable addObject:self.donate2];
-    [self.donationsMutable addObject:self.donate3];
-    self.donations = [NSArray arrayWithArray:self.donationsMutable];
-    
-}
 
 -(void)queryForDonations{
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
@@ -90,8 +63,12 @@
                      //NSLog(@"%@", key1);
                      NSDictionary *smallerDict = smallDict[key1];
                      newDonor.foodType = smallerDict[@"fType"];
-                     //NSString *quantString = smallerDict[@"quant"];
-                     //newDonor.quantity = [NSNumber numberWithDouble:quantString.doubleValue];
+                     NSString *longitudeString = smallerDict[@"long"];
+                     newDonor.longitude = [NSNumber numberWithDouble:[longitudeString doubleValue]];
+                     NSString *latitudeString = smallerDict[@"lat"];
+                     newDonor.latitude = [NSNumber numberWithDouble:[latitudeString doubleValue]];
+                     NSString *quantString = smallerDict[@"quant"];
+                     newDonor.quantity = [NSNumber numberWithDouble:[quantString doubleValue]];
                      NSString *nameString = [help objectForKey:key][@"name"];
                      newDonor.orgName = nameString;
                      //NSLog(@"here");
@@ -120,9 +97,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    //DonationCell *cell = [[DonationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    DonationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DonationCell" forIndexPath:indexPath];
     Donation *returnedDonation = self.donations[indexPath.row];
-    //cell.textLabel.text = returnedDonation.orgName;
+    cell.donationTitle.text = returnedDonation.orgName;
+    cell.foodLabel.text = returnedDonation.foodType;
+    //cell.delegate = self;
     return cell;
 }
 

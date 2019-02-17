@@ -17,6 +17,7 @@
                                    password:uPassword
                                  completion:^(FIRAuthDataResult * _Nullable authResult,
                                               NSError * _Nullable error) {
+                                     
                                      NSString *userID = [FIRAuth auth].currentUser.uid;
                                      NSString *title = [self.segment titleForSegmentAtIndex:self.segment.selectedSegmentIndex];
                                      NSString *uName = self.userName.text;

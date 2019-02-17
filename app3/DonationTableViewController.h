@@ -15,11 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DonationTableViewController : UIViewController <UITableViewDataSource, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property NSMutableArray *donationsMutable;
-@property NSArray *donations;
-@property (strong, nonatomic) Donation *donate1;
-@property (strong, nonatomic) Donation *donate2;
-@property (strong, nonatomic) Donation *donate3;
+@property (strong, nonatomic) NSMutableArray *donationsMutable;
+@property (strong, nonatomic) NSArray *donations;
 @property (weak, nonatomic) IBOutlet UIView *distanceView;
 @property (weak, nonatomic) IBOutlet UIView *portionView;
 @property (weak, nonatomic) IBOutlet UIView *timeView;
