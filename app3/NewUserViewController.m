@@ -8,11 +8,30 @@
 - (IBAction)didTapGesture:(id)sender {
     [self.view endEditing:YES];
 }
-
+- (void)logoutButtonPressed
+{
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Invalid Password"
+                                 message:@"Enter a Password with Six or More Letters"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                               }];
+    
+    [alert addAction:okButton];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 - (IBAction)didTabSub:(id)sender {
         NSString * uEmail = self.userEmail.text;
         NSString * uPassword = self.userPassword.text;
+    if ([uPassword length] < 6){
+        [self logoutButtonPressed];
+        
+    }
         [[FIRAuth auth] createUserWithEmail:uEmail
                                    password:uPassword
                                  completion:^(FIRAuthDataResult * _Nullable authResult,

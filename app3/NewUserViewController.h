@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UITextField *userPassword;
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segment;
+@property (strong, nonatomic) UIAlertController *alertController;
 @end
 
 NS_ASSUME_NONNULL_END
