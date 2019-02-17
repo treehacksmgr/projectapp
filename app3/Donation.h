@@ -7,18 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Donation : NSObject
 
 @property (nonatomic, strong) NSNumber *quantity;
-@property (nonatomic, strong) NSNumber *startTime;
-@property (nonatomic, strong) NSNumber *timeLimit;
+@property (nonatomic, strong) NSString *startTime;
+@property (nonatomic, strong) NSString *endTime;
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, strong) NSString *orgName;
+@property NSData *donationImageData;
 @property (nonatomic, strong) NSNumber *distance;
+@property (nonatomic, strong) NSString *foodType;
+//@property UIIIM donationImage;
 
 @end
 
