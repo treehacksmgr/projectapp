@@ -58,7 +58,6 @@
 - (IBAction)didTapPost:(id)sender {
     Donation *newDonation = [[Donation alloc] init];
     newDonation.donationImageData = self.imageData;
-    
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
     [outputFormatter setDateFormat:@"HH:mm"]; //24hr time format
     NSString *dateStringStart = [outputFormatter stringFromDate:self.datePicker.date];
@@ -69,10 +68,13 @@
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     newDonation.quantity = [f numberFromString:self.quantityTextField.text];
-    NSLog(@"yeahhh babyy");
-    
+    //NSLog(@"yeahhh babyy");
+    [self addDonationtoFB:newDonation];
 }
 
+-(void) addDonationtoFB:(Donation *)addDonation{
+    NSLog(@"here");
+}
 
 /*
 #pragma mark - Navigation
