@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSData *donationImageData;
 @property (nonatomic, strong) NSNumber *distance;
 @property (nonatomic, strong) NSString *foodType;
+@property (nonatomic, strong) NSString *orgName;
+
 
 @end
 
