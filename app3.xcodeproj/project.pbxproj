@@ -33,6 +33,7 @@
 		F3240E2D2218684600887B04 /* returning_user.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3240E2C2218684600887B04 /* returning_user.storyboard */; };
 		F3F9549D2218C202005FD777 /* NewUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9549C2218C202005FD777 /* NewUserViewController.m */; };
 		F3F954A72218DEA4005FD777 /* NewUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F954A62218DEA4005FD777 /* NewUser.storyboard */; };
+		F3F954AA2218E8A8005FD777 /* ReturningUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F954A92218E8A8005FD777 /* ReturningUserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		F3F9549B2218C202005FD777 /* NewUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewUserViewController.h; sourceTree = "<group>"; };
 		F3F9549C2218C202005FD777 /* NewUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewUserViewController.m; sourceTree = "<group>"; };
 		F3F954A62218DEA4005FD777 /* NewUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUser.storyboard; sourceTree = "<group>"; };
+		F3F954A82218E8A8005FD777 /* ReturningUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReturningUserViewController.h; sourceTree = "<group>"; };
+		F3F954A92218E8A8005FD777 /* ReturningUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReturningUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +182,10 @@
 				4C2493102218360200D9E4F0 /* PopOverViewController.h */,
 				4C2493112218360200D9E4F0 /* PopOverViewController.m */,
 				F3F9549B2218C202005FD777 /* NewUserViewController.h */,
-				F3F954A62218DEA4005FD777 /* NewUser.storyboard */,
 				F3F9549C2218C202005FD777 /* NewUserViewController.m */,
 				F3240E2C2218684600887B04 /* returning_user.storyboard */,
+				F3F954A82218E8A8005FD777 /* ReturningUserViewController.h */,
+				F3F954A92218E8A8005FD777 /* ReturningUserViewController.m */,
 				4C7F4EAD221893420062380B /* DonationTableViewController.h */,
 				4C7F4EAE221893420062380B /* DonationTableViewController.m */,
 				4C7F4EAA221892250062380B /* DonationCell.h */,
@@ -458,6 +462,7 @@
 				4C7F4EB42218B6DE0062380B /* Donation.m in Sources */,
 				4C2492DC221806DB00D9E4F0 /* main.m in Sources */,
 				4C7F4EAF221893420062380B /* DonationTableViewController.m in Sources */,
+				F3F954AA2218E8A8005FD777 /* ReturningUserViewController.m in Sources */,
 				4C2493122218360300D9E4F0 /* PopOverViewController.m in Sources */,
 				4C2492CE221806DA00D9E4F0 /* AppDelegate.m in Sources */,
 				4C24930F22181EB900D9E4F0 /* MapAnnotation.m in Sources */,

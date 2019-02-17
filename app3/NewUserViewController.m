@@ -12,14 +12,14 @@
                                  completion:^(FIRAuthDataResult * _Nullable authResult,
                                               NSError * _Nullable error) {
 }];
-       
+        NSString *userID = [FIRAuth auth].currentUser.uid;
         NSString *title = [self.segment titleForSegmentAtIndex:self.segment.selectedSegmentIndex];
         NSString *uName = self.userName.text;
         FIRDatabaseReference *ref = [[FIRDatabase database] reference];
     
         [[[ref child:@"users"]
-          child:@"ind_user"]
-         setValue:@{@"username": uName, @"role":title}];
+          child:userID]
+         setValue:@{ @"name":uName,@"role":title,@"email":uEmail}];
     if ([title isEqualToString:@"Delivery"]){
 //        [self
 //         presentViewController:[[DonorViewController alloc] init]
