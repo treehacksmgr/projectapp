@@ -26,7 +26,7 @@
             FIRDatabaseReference *ref;
             ref = [[FIRDatabase database] reference];
             [[[ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-                NSString * job = @"";
+                NSString * job =  [[NSString alloc]initWithString:snapshot.value[@"username"]];
                 if ([job isEqualToString:@"Donate"]){
                     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"UserFlow" bundle:nil];
                     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"UserFlow"];
