@@ -91,16 +91,15 @@
     {
         NSNumber *numDonations = [[NSNumber alloc] initWithInt:(int)snapshot.value[@"numOfDonations"] + 1];
         FIRDatabaseReference *ref1 = [[FIRDatabase database] reference];
-    [[[ref1 child:@"users"]
-      child:userID]
-     setValue:@{ @"numOfDonations": numDonations}];
-     FIRDatabaseReference *userRef = [ref child: @"user/numOfDonations"];
-        NSDictionary *newUserData = @{@"quant":addDonation.quantity,@"sTime":addDonation.startTime,                  @"eTime":addDonation.endTime,@"lat":addDonation.latitude,@"long":addDonation.longitude,
-                                      @"oName":addDonation.orgName, @"dist":addDonation.distance,@"fType":addDonation.foodType,@"pic":picToStr};
+    //[[[[ref1 child:@"users"]child:userID]child:@"numOfDonations"]setValue:numDonations];
+        FIRDatabaseReference *userRef = [ref1 child:@"user/donations/numDonations"];
+        NSDictionary *newUserData = @{@"quant":addDonation.quantity,@"fType":addDonation.foodType};
     [userRef updateChildValues: newUserData];
     }];
 }
 
-
-
+//,@"pic":picToStr
+//@"oName":addDonation.orgName,
+//@"sTime":addDonation.startTime,                  @"eTime":addDonation.endTime,@"lat":addDonation.latitude,@"long":addDonation.longitude,
+//@"dist":addDonation.distance,
 @end
