@@ -89,6 +89,7 @@
 - (IBAction)didTapDistance:(id)sender {
     [self sortDonationsByDistance];
     [self.tableView reloadData];
+    self.distanceView.backgroundColor = [UIColor redColor];
 }
 
 - (IBAction)didTapQuantity:(id)sender {

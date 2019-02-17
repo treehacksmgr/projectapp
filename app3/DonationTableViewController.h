@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) Donation *donate1;
 @property (strong, nonatomic) Donation *donate2;
 @property (strong, nonatomic) Donation *donate3;
+@property (weak, nonatomic) IBOutlet UIView *distanceView;
 
 @end
 
