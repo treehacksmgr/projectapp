@@ -27,11 +27,7 @@
     self.donations = [[NSArray alloc] init];
     //[self populateFakeData];
     [self queryForDonations];
-    
-//    self.donations = @[@"New York, NY", @"Los Angeles, CA", @"Chicago, IL", @"Houston, TX",
-//             @"Philadelphia, PA", @"Phoenix, AZ", @"San Diego, CA", @"San Antonio, TX",
-//             @"Dallas, TX", @"Detroit, MI", @"San Jose, CA", @"Indianapolis, IN",
-//             @"Jacksonville, FL"];
+    self.donations = [NSArray arrayWithArray:self.donationsMutable];
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"DonationCell"];
     
@@ -75,10 +71,11 @@
 }
 
 -(void)queryForDonations{
-
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     FIRDatabaseReference *rootRef= [[FIRDatabase database] reference];
     [rootRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot)
      {
+         dispatch_semaphore_signal(sema);
          if (snapshot.exists)
          {
              //NSLog(@"%@",snapshot.value);
@@ -90,16 +87,18 @@
                      NSDictionary *smallDict = [help objectForKey:key][@"donations"];
                      NSString* key1 = smallDict.allKeys[0];
                      newDonor.donationTitle = key1;
-                     NSLog(@"%@", key1);
+                     //NSLog(@"%@", key1);
                      NSDictionary *smallerDict = smallDict[key1];
                      newDonor.foodType = smallerDict[@"fType"];
                      //NSString *quantString = smallerDict[@"quant"];
                      //newDonor.quantity = [NSNumber numberWithDouble:quantString.doubleValue];
                      NSString *nameString = [help objectForKey:key][@"name"];
                      newDonor.orgName = nameString;
-                     NSLog(@"here");
+                     //NSLog(@"here");
+                     [self.donationsMutable addObject:newDonor];
                  }
                  
+                // NSLog(@"here2");
 //                 NSString *value = [help objectForKey:key];
 //                 NSLog(@" value = %@",value);
 //                 NSLog(@"key = %@",key);
@@ -111,10 +110,13 @@
          } else {
              NSLog(@"fuck me");
          }
+         //self.donations = [NSArray arrayWithArray:self.donationsMutable];
      }];
     //NSLog(@"testing query");
     //FIRDataEventTypeValue *refhandle;
-    
+    while (dispatch_semaphore_wait(sema, DISPATCH_TIME_NOW)) { [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:10]];}
+    dispatch_release(sema);
+ 
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
