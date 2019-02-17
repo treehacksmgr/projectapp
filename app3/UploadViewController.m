@@ -16,7 +16,9 @@
 
 @end
 
-@implementation UploadViewController
+@implementation UploadViewController{
+    CLLocationManager *locationManager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +29,10 @@
     tapGesture1.delegate = self;
     
     [self.uploadedImage addGestureRecognizer:tapGesture1];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    [locationManager startUpdatingLocation];
     
 }
 
@@ -58,6 +64,7 @@
 
 - (IBAction)didTapPost:(id)sender {
     Donation *newDonation = [[Donation alloc] init];
+
     newDonation.donationImageData = self.imageData;
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
     [outputFormatter setDateFormat:@"HH:mm"]; //24hr time format
@@ -69,6 +76,8 @@
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     newDonation.quantity = [f numberFromString:self.quantityTextField.text];
+    newDonation.latitude = [NSNumber numberWithDouble:locationManager.location.coordinate.latitude];
+    newDonation.longitude = [NSNumber numberWithDouble:locationManager.location.coordinate.longitude];
     //NSLog(@"yeahhh babyy");
     [self addDonationtoFB:newDonation];
 }

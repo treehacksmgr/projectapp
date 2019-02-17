@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "app3/ViewController.m"
-            timestampString = "572074316.453027"
+            filePath = "app3/UploadViewController.m"
+            timestampString = "572079048.468401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-mapView:viewForAnnotation:"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-addDonationtoFB:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
