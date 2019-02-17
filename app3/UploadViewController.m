@@ -87,22 +87,13 @@
     
     NSString *userID = [FIRAuth auth].currentUser.uid;
     NSString *picToStr = [addDonation.donationImageData base64EncodedStringWithOptions:0];
-    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
-    [[[ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-    {
-        NSNumber *numDonations = [[NSNumber alloc] initWithInt:(int)snapshot.value[@"numOfDonations"] + 1];
-        FIRDatabaseReference *ref1 = [[FIRDatabase database] reference];
-    [[[ref1 child:@"users"]
-      child:userID]
-     setValue:@{ @"numOfDonations": numDonations}];
-
-     FIRDatabaseReference *userRef = [ref child: @"user/numOfDonations"];
-        NSDictionary *newUserData = @{@"quant":addDonation.quantity,@"sTime":addDonation.startTime,                  @"eTime":addDonation.endTime,@"lat":addDonation.latitude,@"long":addDonation.longitude,
-                                @"fType":addDonation.foodType,@"pic":picToStr};
+    FIRDatabaseReference *refe = [[FIRDatabase database] reference];
+    NSString *str = @"users/";
+    str = [str stringByAppendingString:userID];
+    str = [str stringByAppendingString:@"/donations/"];
+    str = [str stringByAppendingString:addDonation.donationTitle];
+    FIRDatabaseReference *userRef = [refe child:str];
+        NSDictionary *newUserData = @{@"quant":addDonation.quantity,@"fType":addDonation.foodType};
     [userRef updateChildValues: newUserData];
-    }];
 }
-
-
-
 @end

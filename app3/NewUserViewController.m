@@ -24,7 +24,7 @@
                                      
                                      [[[ref child:@"users"]
                                        child:userID]
-                                      setValue:@{ @"name":uName,@"role":title,@"email":uEmail,@"donations":@ 0}];
+                                      setValue:@{ @"name":uName,@"role":title,@"email":uEmail}];
                                      if ([title isEqualToString:@"Donate"]){
                                          UIStoryboard *sb = [UIStoryboard storyboardWithName:@"UserFlow" bundle:nil];
                                          UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"UserFlow"];
