@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *endTime;
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
-@property (nonatomic, strong) NSString *orgName;
+//@property (nonatomic, strong) NSString *orgName;
 @property NSData *donationImageData;
 @property (nonatomic, strong) NSNumber *distance;
 @property (nonatomic, strong) NSString *foodType;

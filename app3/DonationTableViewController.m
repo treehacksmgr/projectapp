@@ -52,21 +52,21 @@
     self.donate1.longitude = [NSNumber numberWithDouble:-122.0788];
     //donate1.startTime =
     self.donate1.quantity = [NSNumber numberWithDouble:20];
-    self.donate1.orgName = @"Google HQ";
+    //self.donate1.orgName = @"Google HQ";
     
     self.donate2 = [[Donation alloc] init];
     self.donate2.latitude = [NSNumber numberWithDouble:35.7877];
     self.donate2.longitude = [NSNumber numberWithDouble:-78.6442];
     //donate1.startTime =
     self.donate2.quantity = [NSNumber numberWithDouble:12];
-    self.donate2.orgName = @"Raleigh";
+    //self.donate2.orgName = @"Raleigh";
     
     self.donate3 = [[Donation alloc] init];
     self.donate3.latitude = [NSNumber numberWithDouble:32.7157];
     self.donate3.longitude = [NSNumber numberWithDouble:-117.1610];
     //donate1.startTime =
     self.donate3.quantity = [NSNumber numberWithDouble:1];
-    self.donate3.orgName = @"San Diego";
+    //self.donate3.orgName = @"San Diego";
     
     [self.donationsMutable addObject:self.donate1];
     [self.donationsMutable addObject:self.donate2];
@@ -78,7 +78,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     Donation *returnedDonation = self.donations[indexPath.row];
-    cell.textLabel.text = returnedDonation.orgName;
+    //cell.textLabel.text = returnedDonation.orgName;
     return cell;
 }
 
