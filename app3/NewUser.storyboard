@@ -20,6 +20,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="TjG-5C-2Kb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rhc-OX-XIo">
                                 <rect key="frame" x="184" y="480" width="186" height="30"/>
@@ -94,6 +95,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zA3-kA-lKZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="406" id="a4M-cF-wfO"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ecT-Rf-5cS" appends="YES" id="mHm-Eu-tLe"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -106,9 +117,11 @@
                             <constraint firstItem="hDX-VX-UwD" firstAttribute="leading" secondItem="0hu-QM-IDM" secondAttribute="leading" constant="168" id="FXb-AH-d5L"/>
                             <constraint firstItem="rhc-OX-XIo" firstAttribute="leading" secondItem="FSc-Ol-sNe" secondAttribute="trailing" constant="47" id="Gl2-Vh-52e"/>
                             <constraint firstItem="d8A-Rz-B4q" firstAttribute="top" secondItem="rhc-OX-XIo" secondAttribute="bottom" constant="28" id="NGB-v0-gwB"/>
+                            <constraint firstItem="zA3-kA-lKZ" firstAttribute="trailing" secondItem="0hu-QM-IDM" secondAttribute="trailing" id="NwD-0T-DUC"/>
                             <constraint firstItem="rhc-OX-XIo" firstAttribute="top" secondItem="LMy-4y-una" secondAttribute="bottom" constant="34" id="Pn3-mE-Ue6"/>
                             <constraint firstItem="Cv1-rW-ezv" firstAttribute="leading" secondItem="0hu-QM-IDM" secondAttribute="leading" constant="146" id="UlI-r3-0KJ"/>
                             <constraint firstItem="TjG-5C-2Kb" firstAttribute="bottom" secondItem="0hu-QM-IDM" secondAttribute="bottom" constant="34" id="YpY-0l-1k9"/>
+                            <constraint firstItem="zA3-kA-lKZ" firstAttribute="leading" secondItem="0hu-QM-IDM" secondAttribute="leading" id="YrG-Sc-K5c"/>
                             <constraint firstItem="Cv1-rW-ezv" firstAttribute="top" secondItem="0hu-QM-IDM" secondAttribute="top" constant="291" id="ZUX-qt-ZbI"/>
                             <constraint firstItem="0hu-QM-IDM" firstAttribute="trailing" secondItem="rhc-OX-XIo" secondAttribute="trailing" constant="44" id="d47-8H-meI"/>
                             <constraint firstItem="uqQ-eg-zg0" firstAttribute="leading" secondItem="0hu-QM-IDM" secondAttribute="leading" constant="149" id="eBs-U0-FOn"/>
@@ -116,6 +129,7 @@
                             <constraint firstItem="R2z-ro-7KC" firstAttribute="top" secondItem="FSc-Ol-sNe" secondAttribute="bottom" constant="33" id="fnL-8c-odd"/>
                             <constraint firstItem="LMy-4y-una" firstAttribute="leading" secondItem="xxb-eC-G2X" secondAttribute="trailing" constant="67" id="gO2-5S-zNU"/>
                             <constraint firstItem="TjG-5C-2Kb" firstAttribute="leading" secondItem="0hu-QM-IDM" secondAttribute="leading" id="h4c-xs-i5C"/>
+                            <constraint firstItem="zA3-kA-lKZ" firstAttribute="top" secondItem="fC6-Tm-1Cg" secondAttribute="top" id="h6Q-vN-kPX"/>
                             <constraint firstItem="uqQ-eg-zg0" firstAttribute="top" secondItem="0hu-QM-IDM" secondAttribute="top" constant="163" id="h7F-mO-WYy"/>
                             <constraint firstItem="nK2-es-QEa" firstAttribute="top" secondItem="d8A-Rz-B4q" secondAttribute="bottom" constant="41" id="ry1-Lj-5jm"/>
                             <constraint firstItem="FSc-Ol-sNe" firstAttribute="top" secondItem="xxb-eC-G2X" secondAttribute="bottom" constant="38.5" id="sk0-o9-6bP"/>
@@ -134,6 +148,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIw-wj-1Lw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wqh-4a-6e5" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="ecT-Rf-5cS">
+                    <connections>
+                        <action selector="didTapGesture:" destination="IoU-nO-QRu" id="AG5-jp-Xzi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="107.24637681159422" y="-65.625"/>
         </scene>
