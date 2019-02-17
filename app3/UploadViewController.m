@@ -94,9 +94,11 @@
     [[[ref1 child:@"users"]
       child:userID]
      setValue:@{ @"numOfDonations": numDonations}];
-    [[[[ref1 child:@"users"] child:userID] child:@"numOfDonations"]
-          setValue:@{ @"quant":addDonation.quantity,@"sTime":addDonation.startTime,                  @"eTime":addDonation.endTime,@"lat":addDonation.latitude,@"long":addDonation.longitude,
-                       @"fType":addDonation.foodType,@"pic":picToStr}] ;
+
+     FIRDatabaseReference *userRef = [ref child: @"user/numOfDonations"];
+        NSDictionary *newUserData = @{@"quant":addDonation.quantity,@"sTime":addDonation.startTime,                  @"eTime":addDonation.endTime,@"lat":addDonation.latitude,@"long":addDonation.longitude,
+                                @"fType":addDonation.foodType,@"pic":picToStr};
+    [userRef updateChildValues: newUserData];
     }];
 }
 

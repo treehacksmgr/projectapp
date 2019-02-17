@@ -18,11 +18,8 @@
                                      
                                      [[[ref child:@"users"]
                                        child:userID]
-                                      setValue:@{ @"name":uName,@"role":title,@"email":uEmail}];
+                                      setValue:@{ @"name":uName,@"role":title,@"email":uEmail,@"donations":@ 0}];
                                      if ([title isEqualToString:@"Donate"]){
-                                         [[[ref child:@"users"]
-                                           child:userID]
-                                          setValue:@{ @"donations":@ 0}];
                                          UIStoryboard *sb = [UIStoryboard storyboardWithName:@"UserFlow" bundle:nil];
                                          UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"UserFlow"];
                                          [self

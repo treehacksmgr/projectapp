@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XXZ-f8-yif">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,27 +15,16 @@
             <objects>
                 <viewController restorationIdentifier="Openingboard" storyboardIdentifier="OpeningBoard" title="Opening" id="XXZ-f8-yif" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9G-6N-H1u">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="ulQ-N4-ecU">
-                                <rect key="frame" x="0.0" y="53" width="375" height="430"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="ulQ-N4-ecU">
+                                <rect key="frame" x="0.0" y="77" width="414" height="459"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thh-4B-RSW">
-                                <rect key="frame" x="139" y="562" width="106" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="New User">
-                                    <color key="titleColor" red="0.21037453219999999" green="0.49943783110000001" blue="0.76594883420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dwc-sb-iXa" kind="presentation" identifier="NewUserSegue" id="dPy-bJ-rFv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlA-0O-lFk">
-                                <rect key="frame" x="144" y="491" width="97" height="40"/>
+                                <rect key="frame" x="151" y="480" width="112" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <state key="normal" title="Returning">
                                     <color key="titleColor" red="0.21037453224399888" green="0.49943783105616735" blue="0.76594883419689119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -43,11 +32,23 @@
                                     <segue destination="hAU-RJ-o7F" kind="presentation" identifier="returnSegue" id="ra5-Fz-OjL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thh-4B-RSW">
+                                <rect key="frame" x="157" y="544" width="106" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="New User">
+                                    <color key="titleColor" red="0.21037453219999999" green="0.49943783110000001" blue="0.76594883420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dwc-sb-iXa" kind="presentation" identifier="NewUserSegue" id="dPy-bJ-rFv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ulQ-N4-ecU" firstAttribute="leading" secondItem="eXM-mK-F0a" secondAttribute="leading" id="FrK-yW-9vg"/>
                             <constraint firstItem="ulQ-N4-ecU" firstAttribute="trailing" secondItem="eXM-mK-F0a" secondAttribute="trailing" id="N6g-3f-nvk"/>
+                            <constraint firstItem="ulQ-N4-ecU" firstAttribute="top" secondItem="eXM-mK-F0a" secondAttribute="top" constant="33" id="six-Cf-xwJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eXM-mK-F0a"/>
                     </view>
