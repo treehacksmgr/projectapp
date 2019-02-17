@@ -8,6 +8,7 @@
 
 #import "UploadViewController.h"
 #import "Donation.h"
+#import <Firebase/Firebase.h>
 
 @interface UploadViewController ()
 
@@ -82,17 +83,23 @@
 }
 
 -(void) addDonationtoFB:(Donation *)addDonation{
-    NSLog(@"here");
+    
+    NSString *userID = [FIRAuth auth].currentUser.uid;
+    NSString *picToStr = [addDonation.donationImageData base64EncodedStringWithOptions:0];
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    [[[ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
+    {
+        NSNumber *numDonations = [[NSNumber alloc] initWithInt:(int)snapshot.value[@"numOfDonations"] + 1];
+        FIRDatabaseReference *ref1 = [[FIRDatabase database] reference];
+    [[[ref1 child:@"users"]
+      child:userID]
+     setValue:@{ @"numOfDonations": numDonations}];
+    [[[[ref1 child:@"users"] child:userID] child:@"numOfDonations"]
+          setValue:@{ @"quant":addDonation.quantity,@"sTime":addDonation.startTime,                  @"eTime":addDonation.endTime,@"lat":addDonation.latitude,@"long":addDonation.longitude,
+                      @"oName":addDonation.orgName, @"dist":addDonation.distance,@"fType":addDonation.foodType,@"pic":picToStr}] ;
+    }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
