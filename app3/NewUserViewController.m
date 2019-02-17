@@ -4,7 +4,7 @@
 #import "DonorViewController.h"
 
 @implementation NewUserViewController
-- (IBAction)didTapSubmit:(id)sender {
+- (IBAction)didTabSub:(id)sender {
         NSString * uEmail = self.userEmail.text;
         NSString * uPassword = self.userPassword.text;
         [[FIRAuth auth] createUserWithEmail:uEmail
@@ -41,5 +41,7 @@
 
 
 
+- (IBAction)userNam:(id)sender {
+}
 @end
 
