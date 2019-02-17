@@ -177,6 +177,7 @@
 				4C2493102218360200D9E4F0 /* PopOverViewController.h */,
 				4C2493112218360200D9E4F0 /* PopOverViewController.m */,
 				F3F9549B2218C202005FD777 /* NewUserViewController.h */,
+				F3F954A62218DEA4005FD777 /* NewUser.storyboard */,
 				F3F9549C2218C202005FD777 /* NewUserViewController.m */,
 				F3240E2C2218684600887B04 /* returning_user.storyboard */,
 				4C7F4EAD221893420062380B /* DonationTableViewController.h */,
@@ -185,7 +186,6 @@
 				4C7F4EAB221892250062380B /* DonationCell.m */,
 				4C7F4EB22218B6DE0062380B /* Donation.h */,
 				4C7F4EB32218B6DE0062380B /* Donation.m */,
-				F3F954A62218DEA4005FD777 /* NewUser.storyboard */,
 			);
 			path = app3;
 			sourceTree = "<group>";
