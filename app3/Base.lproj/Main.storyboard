@@ -45,6 +45,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zR-ih-A4G">
+                                <rect key="frame" x="0.0" y="70" width="148" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.46441730193155617" blue="0.98342052825922421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjh-eU-eGf">
                                 <rect key="frame" x="29" y="90" width="105" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,6 +81,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Table View" id="QO1-hg-iCo"/>
                     <connections>
+                        <outlet property="distanceView" destination="0zR-ih-A4G" id="1au-8d-Ytn"/>
                         <outlet property="tableView" destination="Eab-hP-xSc" id="dTj-Y0-F2R"/>
                     </connections>
                 </viewController>
@@ -229,6 +235,6 @@
     </scenes>
     <resources>
         <image name="shithole" width="300" height="225"/>
-        <image name="user" width="64" height="64"/>
+        <image name="user" width="48" height="48"/>
     </resources>
 </document>

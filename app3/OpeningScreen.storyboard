@@ -18,30 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thh-4B-RSW">
-                                <rect key="frame" x="154" y="318" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New User"/>
-                                <connections>
-                                    <segue destination="dwc-sb-iXa" kind="presentation" identifier="NewUserSegue" id="dPy-bJ-rFv"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="ulQ-N4-ecU">
+                                <rect key="frame" x="0.0" y="135" width="375" height="332"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlA-0O-lFk">
-                                <rect key="frame" x="154" y="234" width="67" height="30"/>
+                                <rect key="frame" x="164" y="495" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Returning"/>
+                                <state key="normal" title="Returning">
+                                    <color key="titleColor" red="0.16409506212554481" green="0.4742402178091355" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="hAU-RJ-o7F" kind="presentation" identifier="returnSegue" id="ra5-Fz-OjL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thh-4B-RSW">
+                                <rect key="frame" x="164" y="566" width="67" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New User">
+                                    <color key="titleColor" red="0.13824929534794544" green="0.51532303040310246" blue="0.93525340025906734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dwc-sb-iXa" kind="presentation" identifier="NewUserSegue" id="dPy-bJ-rFv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ulQ-N4-ecU" firstAttribute="leading" secondItem="eXM-mK-F0a" secondAttribute="leading" id="FrK-yW-9vg"/>
+                            <constraint firstItem="ulQ-N4-ecU" firstAttribute="trailing" secondItem="eXM-mK-F0a" secondAttribute="trailing" id="N6g-3f-nvk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eXM-mK-F0a"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHX-BG-oIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-222" y="128"/>
+            <point key="canvasLocation" x="-223.19999999999999" y="127.28635682158921"/>
         </scene>
         <!--returning_user-->
         <scene sceneID="07w-4P-f1t">
@@ -60,4 +71,7 @@
             <point key="canvasLocation" x="337" y="142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo screen 2" width="383" height="459"/>
+    </resources>
 </document>
