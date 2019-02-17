@@ -93,7 +93,10 @@
     str = [str stringByAppendingString:@"/donations/"];
     str = [str stringByAppendingString:addDonation.donationTitle];
     FIRDatabaseReference *userRef = [refe child:str];
-        NSDictionary *newUserData = @{@"quant":addDonation.quantity,@"fType":addDonation.foodType};
+    NSDictionary *newUserData = @{@"quant":addDonation.quantity,@"fType":addDonation.foodType,@"sTime":addDonation.startTime,
+          @"eTime":addDonation.endTime,@"long":addDonation.longitude,@"lat":addDonation.latitude,
+          @"pictureAsStr":picToStr};
     [userRef updateChildValues: newUserData];
 }
 @end
+
