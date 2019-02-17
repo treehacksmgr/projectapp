@@ -26,12 +26,14 @@
             FIRDatabaseReference *ref;
             ref = [[FIRDatabase database] reference];
             [[[ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-                NSString *job = snapshot.value[@"role"] ;
-                if ( [job isEqualToString:@"Donate"] ){
-                    //        [self
-                    //         presentViewController:[[DonorViewController alloc] init]
-                    //         animated:YES
-                    //         completion:nil];
+                NSString * job = @"";
+                if ([job isEqualToString:@"Donate"]){
+                    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"UserFlow" bundle:nil];
+                    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"UserFlow"];
+                    [self
+                     presentViewController:vc
+                     animated:YES
+                     completion:nil];
                 }
                 else{
                     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
