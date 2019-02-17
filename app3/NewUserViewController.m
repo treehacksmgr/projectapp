@@ -4,6 +4,12 @@
 #import "UploadViewController.h"
 
 @implementation NewUserViewController
+
+- (IBAction)didTapGesture:(id)sender {
+    [self.view endEditing:YES];
+}
+
+
 - (IBAction)didTabSub:(id)sender {
         NSString * uEmail = self.userEmail.text;
         NSString * uPassword = self.userPassword.text;
