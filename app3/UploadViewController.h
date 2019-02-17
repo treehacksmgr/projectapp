@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UploadViewController : UIViewController
+@interface UploadViewController : UIViewController < UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *uploadedImage;
+@property (weak, nonatomic) IBOutlet UITextField *foodTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIDatePicker *endingDatePicker;
+@property (weak, nonatomic) IBOutlet UITextField *quantityTextField;
+
 
 @end
 
