@@ -75,11 +75,44 @@
 }
 
 -(void)queryForDonations{
-//    self.ref = [[FIRDatabase database] reference];
-//    FIRDatabaseQuery *myUserQuery =
-    FIRDatabaseReference * mark = [[FIRDatabase database] reference];
-    FIRDatabaseQuery * json = [[mark child:@"users"] queryOrderedByChild:@"donations"];
-    NSLog(@"testing query");
+
+    FIRDatabaseReference *rootRef= [[FIRDatabase database] reference];
+    [rootRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot)
+     {
+         if (snapshot.exists)
+         {
+             //NSLog(@"%@",snapshot.value);
+             NSDictionary *help = snapshot.value[@"users"];
+             
+             for (NSString* key in help.allKeys) {
+                 if ([help objectForKey:key][@"donations"] != NULL) {
+                     Donation *newDonor = [[Donation alloc] init];
+                     NSDictionary *smallDict = [help objectForKey:key][@"donations"];
+                     NSString* key1 = smallDict.allKeys[0];
+                     newDonor.donationTitle = key1;
+                     NSLog(@"%@", key1);
+                     NSDictionary *smallerDict = smallDict[key1];
+                     newDonor.foodType = smallerDict[@"fType"];
+                     //NSString *quantString = smallerDict[@"quant"];
+                     //newDonor.quantity = [NSNumber numberWithDouble:quantString.doubleValue];
+                     NSString *nameString = [help objectForKey:key][@"name"];
+                     newDonor.orgName = nameString;
+                     NSLog(@"here");
+                 }
+                 
+//                 NSString *value = [help objectForKey:key];
+//                 NSLog(@" value = %@",value);
+//                 NSLog(@"key = %@",key);
+                 //NSString *value = [help objectForKey:key];
+                 //NSDictionary *smallerDict = [help objectForKey:key][@"donations"];
+                 //NSLog(@"small dict = %@", smallerDict);
+                 
+             }
+         } else {
+             NSLog(@"fuck me");
+         }
+     }];
+    //NSLog(@"testing query");
     //FIRDataEventTypeValue *refhandle;
     
 }
