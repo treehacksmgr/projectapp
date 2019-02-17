@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Donation.h"
+#import <Firebase/Firebase.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIView *distanceView;
 @property (weak, nonatomic) IBOutlet UIView *portionView;
 @property (weak, nonatomic) IBOutlet UIView *timeView;
+@property (strong, nonatomic) FIRDatabaseReference *ref;
 
 
 @end

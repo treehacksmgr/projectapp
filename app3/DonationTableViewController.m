@@ -18,8 +18,6 @@
     CLLocationCoordinate2D location2;
 }
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,7 +25,8 @@
     //making fake data to test the table
     self.donationsMutable = [[NSMutableArray alloc] init];
     self.donations = [[NSArray alloc] init];
-    [self populateFakeData];
+    //[self populateFakeData];
+    [self queryForDonations];
     
 //    self.donations = @[@"New York, NY", @"Los Angeles, CA", @"Chicago, IL", @"Houston, TX",
 //             @"Philadelphia, PA", @"Phoenix, AZ", @"San Diego, CA", @"San Antonio, TX",
@@ -72,6 +71,28 @@
     [self.donationsMutable addObject:self.donate2];
     [self.donationsMutable addObject:self.donate3];
     self.donations = [NSArray arrayWithArray:self.donationsMutable];
+    
+}
+
+-(void)queryForDonations{
+//    self.ref = [[FIRDatabase database] reference];
+//    FIRDatabaseQuery *myUserQuery =
+//    FIRDatabaseReference * mark = [[FIRDatabase database] reference];
+//    FIRDatabaseQuery * json = [[mark child:@"users"] queryOrderedByChild:@"donations"];
+//    NSLog(@"%@", json);
+//    NSLog(@"testing query");
+    [FIRDatabaseReference *ref;
+    [[FIRDatabase database] reference]
+     observeEventType:FIRDataEventTypeValue
+     withBlock:^(FIRDataSnapshot *snapshot) {
+         // Loop over children
+         NSEnumerator *children = [snapshot children];
+         FIRDataSnapshot *child;
+         while (child = [children nextObject]) {
+             // ...
+         }
+     }];
+    //FIRDataEventTypeValue *refhandle;
     
 }
 
