@@ -46,12 +46,12 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zR-ih-A4G">
-                                <rect key="frame" x="0.0" y="70" width="148" height="70"/>
+                                <rect key="frame" x="19" y="72" width="119" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.46441730193155617" blue="0.98342052825922421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjh-eU-eGf">
-                                <rect key="frame" x="29" y="90" width="105" height="20"/>
+                                <rect key="frame" x="31" y="93" width="105" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Distance"/>
@@ -59,17 +59,29 @@
                                     <action selector="didTapDistance:" destination="hfq-Wx-9mY" eventType="touchUpInside" id="wLb-dF-XXk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKN-zV-92U">
-                                <rect key="frame" x="191" y="70" width="50" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XOv-jI-bRr" userLabel="Portion View">
+                                <rect key="frame" x="146" y="76" width="119" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKN-zV-92U">
+                                <rect key="frame" x="165" y="82" width="80" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Portion"/>
                                 <connections>
                                     <action selector="didTapQuantity:" destination="hfq-Wx-9mY" eventType="touchUpInside" id="LaD-Ya-pll"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-uw-QBk">
-                                <rect key="frame" x="285" y="90" width="34" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFb-vN-BhP" userLabel="Time View">
+                                <rect key="frame" x="259" y="76" width="108" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-uw-QBk">
+                                <rect key="frame" x="280" y="82" width="56" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Time"/>
                                 <connections>
                                     <action selector="didTapTime:" destination="hfq-Wx-9mY" eventType="touchUpInside" id="K5T-FA-P8y"/>
@@ -82,7 +94,9 @@
                     <tabBarItem key="tabBarItem" title="Table View" id="QO1-hg-iCo"/>
                     <connections>
                         <outlet property="distanceView" destination="0zR-ih-A4G" id="1au-8d-Ytn"/>
+                        <outlet property="portionView" destination="XOv-jI-bRr" id="seo-Ha-mJB"/>
                         <outlet property="tableView" destination="Eab-hP-xSc" id="dTj-Y0-F2R"/>
+                        <outlet property="timeView" destination="LFb-vN-BhP" id="yde-st-Nmt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmb-37-s2J" userLabel="First Responder" sceneMemberID="firstResponder"/>

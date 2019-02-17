@@ -19,26 +19,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="ulQ-N4-ecU">
-                                <rect key="frame" x="0.0" y="135" width="375" height="332"/>
+                                <rect key="frame" x="0.0" y="53" width="375" height="430"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlA-0O-lFk">
-                                <rect key="frame" x="164" y="495" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Returning">
-                                    <color key="titleColor" red="0.16409506212554481" green="0.4742402178091355" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hAU-RJ-o7F" kind="presentation" identifier="returnSegue" id="ra5-Fz-OjL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thh-4B-RSW">
-                                <rect key="frame" x="164" y="566" width="67" height="53"/>
+                                <rect key="frame" x="139" y="562" width="106" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="New User">
-                                    <color key="titleColor" red="0.13824929534794544" green="0.51532303040310246" blue="0.93525340025906734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.21037453219999999" green="0.49943783110000001" blue="0.76594883420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="dwc-sb-iXa" kind="presentation" identifier="NewUserSegue" id="dPy-bJ-rFv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlA-0O-lFk">
+                                <rect key="frame" x="144" y="491" width="97" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Returning">
+                                    <color key="titleColor" red="0.21037453224399888" green="0.49943783105616735" blue="0.76594883419689119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hAU-RJ-o7F" kind="presentation" identifier="returnSegue" id="ra5-Fz-OjL"/>
                                 </connections>
                             </button>
                         </subviews>
