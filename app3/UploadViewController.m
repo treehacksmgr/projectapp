@@ -73,6 +73,7 @@
     newDonation.startTime = dateStringStart;
     newDonation.endTime = dateStringEnd;
     newDonation.foodType = self.foodTextField.text;
+    newDonation.donationTitle = self.titleTextField.text;
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     newDonation.quantity = [f numberFromString:self.quantityTextField.text];

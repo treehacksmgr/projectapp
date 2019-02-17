@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UIDatePicker *endingDatePicker;
 @property (weak, nonatomic) IBOutlet UITextField *quantityTextField;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
 
 @end
